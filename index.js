@@ -1,5 +1,6 @@
 function App() {
     const [displayTime, setDisplayTime] = React.useState(25 * 60);
+    const [breakTime, setBreakTime] = React.useState(5 * 60);
 
     const formatTime = (time) => {
         let minutes = Math.floor(time / 60);
@@ -16,7 +17,7 @@ function App() {
         title={"break length"}
         changeTime={null}
         type={"break"}
-        time={null}
+        time={breakTime}
         formatTime={formatTime}
         />
         <h1>{formatTime(displayTime)}</h1>
